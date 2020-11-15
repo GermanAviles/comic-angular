@@ -9,4 +9,6 @@ Este proyecto fue generado mediante [Angular CLI](https://github.com/angular/ang
 
 ## Ejecutar el proyecto
 
-Una vez descargado el proyecto ejecuta `npm install` para instalar todas las dependencias del proyecto, luego ejecuta el comando `ng serve` para correr el proyecto en modo desarrollo. Por último navega a `http://localhost:4200/`
+Una vez descargado el proyecto ejecuta `npm install` para instalar todas las dependencias del proyecto, luego ejecuta el comando `ng serve` para correr el proyecto en modo desarrollo. Por último navega a `http://localhost:4200/` 
+
+listo, ya tienes la aplicación corriento :D
