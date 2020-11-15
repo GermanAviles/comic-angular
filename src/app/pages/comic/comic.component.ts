@@ -28,7 +28,6 @@ export class ComicComponent implements OnInit {
   }
 
   nuevoCometario( comentario: Comentario ): void {
-    console.log('COMENTARIO: ', comentario);
     this.comentarios.push(comentario);
   }
 

@@ -21,7 +21,7 @@
         <textarea [(ngModel)]="descripcionComentario" name="comentario" id="comentario-comic" cols="30" rows="10"></textarea>
       </div>
       <div class="cont-botones">
-        <a href="javascript:void(0);" class="btn btn-danger"> Cancelar </a>
+        <a href="javascript:void(0);" class="btn btn-danger" (click)="limpiarInputs()"> Cancelar </a>
         <a href="javascript:void(0);" class="btn btn-succes" (click)="agregarComentario()"> Guardar </a>
       </div>
     </div>
