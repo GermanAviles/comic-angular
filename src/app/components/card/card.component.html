@@ -1,0 +1,28 @@
+<div class="card-comic">
+    <!-- Imagen del comic -->
+    <div class="cont-img-comic">
+      <img id="comic-image" [src]="srcImage" alt="imagen-comic" >
+    </div>
+    <!-- Información comic -->
+    <div id="cont-info-comic" class="cont-info-comic">
+      <!-- titulo del comic -->
+      <div class="cont-title">
+        <h1 id="titulo-comic"> {{ titulo }} </h1>
+        <span id="icono-refresh" class="icono-refresh material-icons" (click)="refrescar()">cached</span>
+      </div>
+      <!-- Descripción -->
+      <div class="descripcion-comic">
+        <p id="descripcion-comic"> {{ descripcion }} </p>
+      </div>
+      <!-- Calificación del comic -->
+      <app-rating-stars></app-rating-stars>
+      <!-- Comentario -->
+      <div class="cont-comentario">
+        <textarea name="comentario" id="comentario-comic" cols="30" rows="10"></textarea>
+      </div>
+      <div class="cont-botones">
+        <a href="javascript:void(0);" class="btn btn-danger"> Cancelar </a>
+        <a href="javascript:void(0);" class="btn btn-succes"> Guardar </a>
+      </div>
+    </div>
+</div>

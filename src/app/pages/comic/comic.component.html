@@ -1,0 +1,18 @@
+<div class="comics">
+  <div *ngIf="!comic" class="loading">
+    <app-loading></app-loading>
+  </div>
+  <div *ngIf="comic" class="cont-comic">
+    <div class="comic">
+      <app-card
+        [srcImage]="comic.img"
+        [titulo]="comic.title"
+        [descripcion]="comic.transcript"
+        (refreshComic)="cargarComic()"
+      ></app-card>
+    </div>
+    <div class="comentarios-comic">
+      <app-comentarios></app-comentarios>
+    </div>
+  </div>
+</div>
