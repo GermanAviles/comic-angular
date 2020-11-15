@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Comentario } from '../../models/comentario';
 
 @Component({
   selector: 'app-comentarios',
@@ -7,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ComentariosComponent implements OnInit {
 
-  @Input() comentarios = [];
+  @Input() comentarios: Comentario[] = [];
 
   constructor() { }
 

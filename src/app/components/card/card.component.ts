@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Comentario } from '../../models/comentario';
 
 @Component({
   selector: 'app-card',
@@ -11,6 +12,10 @@ export class CardComponent implements OnInit {
   @Input() titulo = '';
   @Input() descripcion = '';
   @Output() refreshComic = new EventEmitter<any>();
+  @Output() crearComentario = new EventEmitter<Comentario>();
+
+  descripcionComentario = '';
+  calificacionComic = 0;
 
   constructor() { }
 
@@ -18,8 +23,20 @@ export class CardComponent implements OnInit {
   }
 
   refrescar(): void {
-    console.log('VAMOS REFRESCAR');
     this.refreshComic.emit(true);
+  }
+
+  agregarComentario(): void {
+    const comentario: Comentario = {
+      titulo: this.titulo,
+      descripcion: this.descripcionComentario,
+      calificacion: this.calificacionComic
+    };
+    this.crearComentario.emit(comentario);
+  }
+
+  agregarCalificacion(event: string): void {
+    this.calificacionComic = Number(event);
   }
 
 }

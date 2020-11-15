@@ -1,13 +1,32 @@
-.comentarios{
-  padding: 10px 20px;
+.sin-comentarios{
+  height: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.329);
+}
+.comentarios {
+  padding: 10px;
+  max-height: 100%;
   .comentario{
     border: 1px solid #00000036;
     border-radius: 4px;
     padding: 10px;
+    max-height: 20vh;
+    height: auto;
+    margin-bottom: 15px;
     .header-comentario{
       margin-bottom: 10px;
       padding: 5px 0;
       border-bottom: 1px dashed #9c9393;
     }
+    // .body-comentario{
+    //   text-overflow: ellipsis;
+    //   white-space: nowrap;
+    //   overflow: hidden;
+    // }
   }
 }

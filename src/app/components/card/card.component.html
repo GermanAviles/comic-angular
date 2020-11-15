@@ -15,14 +15,14 @@
         <p id="descripcion-comic"> {{ descripcion }} </p>
       </div>
       <!-- Calificación del comic -->
-      <app-rating-stars></app-rating-stars>
+      <app-rating-stars (rating)="agregarCalificacion($event)"></app-rating-stars>
       <!-- Comentario -->
       <div class="cont-comentario">
-        <textarea name="comentario" id="comentario-comic" cols="30" rows="10"></textarea>
+        <textarea [(ngModel)]="descripcionComentario" name="comentario" id="comentario-comic" cols="30" rows="10"></textarea>
       </div>
       <div class="cont-botones">
         <a href="javascript:void(0);" class="btn btn-danger"> Cancelar </a>
-        <a href="javascript:void(0);" class="btn btn-succes"> Guardar </a>
+        <a href="javascript:void(0);" class="btn btn-succes" (click)="agregarComentario()"> Guardar </a>
       </div>
     </div>
 </div>

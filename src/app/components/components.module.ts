@@ -4,6 +4,7 @@ import { RatingStarsComponent } from './rating-stars/rating-stars.component';
 import { CardComponent } from './card/card.component';
 import { LoadingComponent } from './loading/loading.component';
 import { ComentariosComponent } from './comentarios/comentarios.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,9 @@ import { ComentariosComponent } from './comentarios/comentarios.component';
     ComentariosComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     RatingStarsComponent,

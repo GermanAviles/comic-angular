@@ -9,10 +9,11 @@
         [titulo]="comic.title"
         [descripcion]="comic.transcript"
         (refreshComic)="cargarComic()"
+        (crearComentario)="nuevoCometario($event)"
       ></app-card>
     </div>
     <div class="comentarios-comic">
-      <app-comentarios></app-comentarios>
+      <app-comentarios [comentarios]="comentarios"></app-comentarios>
     </div>
   </div>
 </div>

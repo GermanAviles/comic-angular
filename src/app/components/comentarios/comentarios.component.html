@@ -1,12 +1,14 @@
 <div class="comentarios">
-  <!-- *ngFor="let comentario of comentarios; let i=index"  -->
-  <div class="comentario">
+  <div *ngFor="let comentario of comentarios" class="comentario">
     <div class="header-comentario">
-      <span class="titulo"> TITULO COMIC </span>
-      <span class="calificacion"> 3/5 </span>
+      <span class="titulo"> {{ comentario.titulo }} </span>
+      <span class="calificacion"> {{ comentario.calificacion }} / 5</span>
     </div>
     <div class="body-comentario">
-      TODO EL COMENTARIO DEL USUARIOs
+      {{ comentario.descripcion }}
     </div>
+  </div>
+  <div *ngIf="!comentarios.length" class="sin-comentarios" >
+    SIN COMENTARIOS
   </div>
 </div>
